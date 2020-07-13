@@ -4,6 +4,7 @@ set -exuo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 export DBUS_SESSION_BUS_ADDRESS=/dev/null
+
 _activate() {
     set +ux
     . /opt/superdesk/activate.sh
@@ -150,7 +151,7 @@ libxmlsec1-dev
 
 # node & npm
 if ! _skip_install nodejs; then
-    curl -sL https://deb.nodesource.com/setup_12.x | bash -
+    curl -sL https://deb.nodesource.com/setup_8.x | bash -
     apt-get install -y nodejs
 
     npm install -g grunt-cli
