@@ -4,7 +4,6 @@ set -exuo pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 export DBUS_SESSION_BUS_ADDRESS=/dev/null
-
 _activate() {
     set +ux
     . /opt/superdesk/activate.sh
